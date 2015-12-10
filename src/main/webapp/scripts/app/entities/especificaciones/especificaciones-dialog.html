@@ -1,0 +1,110 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myEspecificacionesLabel" translate="basjhipsterApp.especificaciones.home.createOrEditLabel">Create or edit a Especificaciones</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="especificaciones.id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label translate="basjhipsterApp.especificaciones.rebotes" for="field_rebotes">Rebotes</label>
+            <input type="number" class="form-control" name="rebotes" id="field_rebotes"
+                    ng-model="especificaciones.rebotes"
+                    min="0">
+
+            <div ng-show="editForm.rebotes.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.rebotes.$error.min" translate="entity.validation.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.rebotes.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="basjhipsterApp.especificaciones.pases" for="field_pases">Pases</label>
+            <input type="number" class="form-control" name="pases" id="field_pases"
+                    ng-model="especificaciones.pases"
+                    min="0">
+
+            <div ng-show="editForm.pases.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.pases.$error.min" translate="entity.validation.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.pases.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="basjhipsterApp.especificaciones.puntos" for="field_puntos">Puntos</label>
+            <input type="number" class="form-control" name="puntos" id="field_puntos"
+                    ng-model="especificaciones.puntos"
+                    min="0">
+
+            <div ng-show="editForm.puntos.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.puntos.$error.min" translate="entity.validation.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.puntos.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="basjhipsterApp.especificaciones.faltas" for="field_faltas">Faltas</label>
+            <input type="number" class="form-control" name="faltas" id="field_faltas"
+                    ng-model="especificaciones.faltas"
+                    min="0">
+
+            <div ng-show="editForm.faltas.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.faltas.$error.min" translate="entity.validation.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.faltas.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="basjhipsterApp.especificaciones.jugadorespec" for="field_jugadorespec">jugadorespec</label>
+            
+            <select class="form-control" id="field_jugadorespec" name="jugadorespec" ng-model="especificaciones.jugadorespec" ng-options="jugador as jugador.nombre for jugador in jugadors track by jugador.id">
+                <option value=""></option>
+            </select>
+            
+        </div>
+        <div class="form-group">
+            <label translate="basjhipsterApp.especificaciones.partidoespec" for="field_partidoespec">partidoespec</label>
+            
+            <select class="form-control" id="field_partidoespec" name="partidoespec" ng-model="especificaciones.partidoespec" ng-options="partido as partido.id for partido in partidos track by partido.id">
+                <option value=""></option>
+            </select>
+            
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

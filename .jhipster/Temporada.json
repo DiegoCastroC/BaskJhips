@@ -1,0 +1,36 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "ligatemp",
+            "otherEntityName": "liga",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "ligaequipo",
+            "otherEntityName": "equipo",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "ligaequipo"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "ligapartido",
+            "otherEntityName": "partido",
+            "relationshipType": "one-to-many",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151202160441",
+    "dto": "no",
+    "pagination": "pagination"
+}

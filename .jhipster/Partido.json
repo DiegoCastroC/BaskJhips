@@ -1,0 +1,59 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "partarb",
+            "otherEntityName": "arbitro",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "ligapartido",
+            "otherEntityName": "temporada",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "partidoespec",
+            "otherEntityName": "especificaciones",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "partidoespec"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "equipoLocal",
+            "otherEntityName": "equipo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "equipoVisitante",
+            "otherEntityName": "equipo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "fecha",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "puntosLocal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "puntosVisitante",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20151202164152",
+    "dto": "no",
+    "pagination": "pagination"
+}

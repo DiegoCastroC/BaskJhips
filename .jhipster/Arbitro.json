@@ -1,0 +1,38 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "ligarb",
+            "otherEntityName": "liga",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "partarb",
+            "otherEntityName": "partido",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "partarb"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "dni",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "fechaNacimiento",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20151202155820",
+    "dto": "no",
+    "pagination": "pagination"
+}

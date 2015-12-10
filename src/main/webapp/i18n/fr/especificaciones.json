@@ -1,0 +1,24 @@
+{
+    "basjhipsterApp": {
+        "especificaciones" : {
+            "home": {
+                "title": "Especificacioness",
+                "createLabel": "Créer un nouveau Especificaciones",
+                "createOrEditLabel": "Créer ou éditer un Especificaciones"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Especificaciones {{ id }} ?"
+            },
+            "detail": {
+                "title": "Especificaciones"
+            },
+            "rebotes": "Rebotes",
+            "pases": "Pases",
+            "puntos": "Puntos",
+            "faltas": "Faltas",
+            "jugadorespec": "Jugadorespec",
+            "partidoespec": "Partidoespec"
+        }
+    }
+}
+

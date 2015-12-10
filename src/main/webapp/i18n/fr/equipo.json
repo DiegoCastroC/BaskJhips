@@ -1,0 +1,27 @@
+{
+    "basjhipsterApp": {
+        "equipo" : {
+            "home": {
+                "title": "Equipos",
+                "createLabel": "Créer un nouveau Equipo",
+                "createOrEditLabel": "Créer ou éditer un Equipo"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Equipo {{ id }} ?"
+            },
+            "detail": {
+                "title": "Equipo"
+            },
+            "nombre": "Nombre",
+            "fechaCreacion": "FechaCreacion",
+            "estadio": "Estadio",
+            "socio": "Socio",
+            "entrenador": "Entrenador",
+            "jugador": "Jugador",
+            "equipoLocal": "EquipoLocal",
+            "equipoVisitante": "EquipoVisitante",
+            "ligaequipo": "Ligaequipo"
+        }
+    }
+}
+

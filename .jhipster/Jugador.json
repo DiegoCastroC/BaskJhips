@@ -1,0 +1,38 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "equipo",
+            "otherEntityName": "equipo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "jugadorespec",
+            "otherEntityName": "especificaciones",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "jugadorespec"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "fechaNacimiento",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "posicion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151202164950",
+    "dto": "no",
+    "pagination": "pagination"
+}
