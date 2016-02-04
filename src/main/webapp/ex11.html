@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<style>
+    table, th , td  {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="customersCtrl">
+    <table>
+        <tr ng-repeat="x in jugadores">
+    <td ng-if="$odd" style="background-color:mediumaquamarine">{{x.nombre}}</td>
+      <td  ng-if="$odd" style="background-color:mediumaquamarine">{{x.posicion}}</td>
+      <td  ng-if="$odd" style="background-color:mediumaquamarine">{{x.equipo.nombre}}</td>
+      <td ng-if="$even" style="background-color:aqua">{{x.nombre}}</td>
+      <td  ng-if="$even" style="background-color:aqua">{{x.posicion}}</td>
+      <td  ng-if="$even" style="background-color:aqua">{{x.equipo.nombre}}</td>
+  </tr>
+</table>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+  $http.get("http://127.0.1.1:8080/api/jugadors").then(function (response) {
+      $scope.jugadores = response.data;
+  });
+});
+</script>
+
+</body>
+</html>
+

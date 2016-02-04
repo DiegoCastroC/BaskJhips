@@ -28,17 +28,17 @@ public class Partido implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-
+    
+    
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
     @JsonSerialize(using = CustomLocalDateSerializer.class)
     @JsonDeserialize(using = ISO8601LocalDateDeserializer.class)
     @Column(name = "fecha")
     private LocalDate fecha;
-
+    
     @Column(name = "puntos_local")
     private Integer puntosLocal;
-
+    
     @Column(name = "puntos_visitante")
     private Integer puntosVisitante;
 
@@ -46,7 +46,7 @@ public class Partido implements Serializable {
     private Arbitro partarb;
 
     @ManyToOne
-    private Temporada temporada;
+    private Temporada tempartido;
 
     @OneToMany(mappedBy = "partidoespec")
     @JsonIgnore
@@ -99,12 +99,12 @@ public class Partido implements Serializable {
         this.partarb = arbitro;
     }
 
-    public Temporada getLigapartido() {
-        return temporada;
+    public Temporada getTempartido() {
+        return tempartido;
     }
 
-    public void setLigapartido(Temporada temporada) {
-        this.temporada = temporada;
+    public void setTempartido(Temporada temporada) {
+        this.tempartido = temporada;
     }
 
     public Set<Especificaciones> getPartidoespecs() {

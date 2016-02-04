@@ -1,6 +1,7 @@
 package com.diego.castro.repository;
 
 import com.diego.castro.domain.Equipo;
+import com.diego.castro.domain.Jugador;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.data.repository.query.Param;
 
@@ -16,5 +17,8 @@ public interface EquipoRepository extends JpaRepository<Equipo,Long> {
 
     @Query("select equipo from Equipo equipo left join fetch equipo.ligaequipos where equipo.id =:id")
     Equipo findOneWithEagerRelationships(@Param("id") Long id);
+
+    /*@Query("select jugador from Jugador j where j.equipo.id =:id")
+    List<Jugador> findbyEquipo(@Param("id") Long id);*/
 
 }

@@ -26,7 +26,7 @@
             <column name="puntos_local" type="integer"/>
             <column name="puntos_visitante" type="integer"/>
             <column name="partarb_id" type="bigint"/>
-            <column name="ligapartido_id" type="bigint"/>
+            <column name="tempartido_id" type="bigint"/>
             <column name="equipolocal_id" type="bigint"/>
             <column name="equipovisitante_id" type="bigint"/>
         </createTable>
@@ -37,9 +37,9 @@
                                  referencedColumnNames="id"
                                  referencedTableName="ARBITRO"/>
 
-        <addForeignKeyConstraint baseColumnNames="ligapartido_id"
+        <addForeignKeyConstraint baseColumnNames="tempartido_id"
                                  baseTableName="PARTIDO"
-                                 constraintName="fk_partido_ligapartido_id"
+                                 constraintName="fk_partido_tempartido_id"
                                  referencedColumnNames="id"
                                  referencedTableName="TEMPORADA"/>
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+ 
+<p>Jugador1:</p>
+<p>Name: <input type="text" ng-model="name"></p>
+<p>Posicion: <input type="text" ng-model="pos"></p>
+<p>Equipo: <input type="text" ng-model="equipo"></p>
+<p></p>
+<p>Ficha Tecnica:</p>
+
+<p>{{name+ ","+pos+","+equipo}}</p>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name= "John";
+    $scope.pos= "Base";
+	$scope.equipo= "Madrid";
+});
+</script>
+
+</body>
+</html>
+

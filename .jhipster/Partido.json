@@ -9,7 +9,7 @@
         },
         {
             "relationshipId": 2,
-            "relationshipName": "ligapartido",
+            "relationshipName": "tempartido",
             "otherEntityName": "temporada",
             "relationshipType": "many-to-one",
             "otherEntityField": "nombre"

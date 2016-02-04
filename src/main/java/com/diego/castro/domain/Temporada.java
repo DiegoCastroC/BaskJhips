@@ -35,10 +35,10 @@ public class Temporada implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Equipo> ligaequipos = new HashSet<>();
 
-    @OneToMany(mappedBy = "temporada")
+    @OneToMany(mappedBy = "tempartido")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<Partido> ligapartidos = new HashSet<>();
+    private Set<Partido> tempartidos = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -72,12 +72,12 @@ public class Temporada implements Serializable {
         this.ligaequipos = equipos;
     }
 
-    public Set<Partido> getLigapartidos() {
-        return ligapartidos;
+    public Set<Partido> getTempartidos() {
+        return tempartidos;
     }
 
-    public void setLigapartidos(Set<Partido> partidos) {
-        this.ligapartidos = partidos;
+    public void setTempartidos(Set<Partido> partidos) {
+        this.tempartidos = partidos;
     }
 
     @Override

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<input ng-model="name">
+
+<h1>Mejor jugador {{name}}</h1>
+<p>{{name}}, jugador del equipo {{equipo}} fue galardonado por como mejor jugador en la posicion de {{pos}}</p>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = "Diego Castro";
+$scope.pos = "alero";
+$scope.equipo = "Barcelona";
+});
+</script>
+
+
+
+</body>
+</html>
+

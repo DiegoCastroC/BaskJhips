@@ -17,10 +17,10 @@
         },
         {
             "relationshipId": 3,
-            "relationshipName": "ligapartido",
+            "relationshipName": "tempartido",
             "otherEntityName": "partido",
             "relationshipType": "one-to-many",
-            "otherEntityField": "nombre"
+            "otherEntityRelationshipName": "tempartido"
         }
     ],
     "fields": [
